@@ -63,7 +63,7 @@
 // http://code.google.com/p/cocoalumberjack/
 // 
 // It allows us to do a lot of logging without significantly slowing down the code.
-#import "DDLog.h"
+#import <CocoaLumberjack/DDLog.h>
 
 #define LogAsync   NO
 #define LogContext 65535

@@ -14,6 +14,7 @@
 				27FBB53916276B4E0060C9AF /* Build Framework */,
 			);
 			dependencies = (
+				270B117F1628E03A005A82FA /* PBXTargetDependency */,
 				27FBB53816276B4C0060C9AF /* PBXTargetDependency */,
 			);
 			name = CocoaAsyncSocketIOS;
@@ -50,6 +51,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		270B11771628E023005A82FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2765C67C161CC34100E21ECB;
+			remoteInfo = CocoaLumberjackStaticIOS;
+		};
+		270B11791628E023005A82FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2765C6CC161CCD2B00E21ECB;
+			remoteInfo = CocoaLumberjackOSX;
+		};
+		270B117C1628E036005A82FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2765C67B161CC34100E21ECB;
+			remoteInfo = CocoaLumberjackStaticIOS;
+		};
+		270B117E1628E03A005A82FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2765C6C0161CCBC500E21ECB;
+			remoteInfo = CocoaLumberjackIOS;
+		};
+		270B11801628E03E005A82FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2765C6CB161CCD2B00E21ECB;
+			remoteInfo = CocoaLumberjackOSX;
+		};
 		27FBB53716276B4C0060C9AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27FBB4C9162765FF0060C9AF /* Project object */;
@@ -75,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaLumberjack.xcodeproj; path = Frameworks/CocoaLumberjack/CocoaLumberjack.xcodeproj; sourceTree = "<group>"; };
 		27FBB4D2162765FF0060C9AF /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBB4D5162765FF0060C9AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27FBB4EC162766610060C9AF /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +154,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270B116F1628E022005A82FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				270B11781628E023005A82FA /* libCocoaLumberjack.a */,
+				270B117A1628E023005A82FA /* CocoaLumberjack.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		27FBB4C7162765FF0060C9AF = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +184,7 @@
 		27FBB4D4162765FF0060C9AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */,
 				27FBB4D5162765FF0060C9AF /* Foundation.framework */,
 				27FBB4ED162766610060C9AF /* Cocoa.framework */,
 				27FBB525162769670060C9AF /* Security.framework */,
@@ -241,6 +288,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				270B117D1628E036005A82FA /* PBXTargetDependency */,
 			);
 			name = CocoaAsyncSocketStaticIOS;
 			productName = CocoaAsyncSocket;
@@ -259,6 +307,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				270B11811628E03E005A82FA /* PBXTargetDependency */,
 			);
 			name = CocoaAsyncSocketOSX;
 			productName = CocoaAsyncSocketOSX;
@@ -284,6 +333,12 @@
 			mainGroup = 27FBB4C7162765FF0060C9AF;
 			productRefGroup = 27FBB4D3162765FF0060C9AF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 270B116F1628E022005A82FA /* Products */;
+					ProjectRef = 270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				27FBB4D1162765FF0060C9AF /* CocoaAsyncSocketStaticIOS */,
@@ -292,6 +347,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		270B11781628E023005A82FA /* libCocoaLumberjack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCocoaLumberjack.a;
+			remoteRef = 270B11771628E023005A82FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		270B117A1628E023005A82FA /* CocoaLumberjack.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjack.framework;
+			remoteRef = 270B11791628E023005A82FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		27FBB4EA162766610060C9AF /* Resources */ = {
@@ -363,6 +435,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		270B117D1628E036005A82FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLumberjackStaticIOS;
+			targetProxy = 270B117C1628E036005A82FA /* PBXContainerItemProxy */;
+		};
+		270B117F1628E03A005A82FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLumberjackIOS;
+			targetProxy = 270B117E1628E03A005A82FA /* PBXContainerItemProxy */;
+		};
+		270B11811628E03E005A82FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLumberjackOSX;
+			targetProxy = 270B11801628E03E005A82FA /* PBXContainerItemProxy */;
+		};
 		27FBB53816276B4C0060C9AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27FBB4D1162765FF0060C9AF /* CocoaAsyncSocketStaticIOS */;
@@ -537,6 +624,7 @@
 				27FBB4FF162766610060C9AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27FBB5011627668B0060C9AF /* Build configuration list for PBXAggregateTarget "CocoaAsyncSocketIOS" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +633,7 @@
 				27FBB5031627668B0060C9AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
