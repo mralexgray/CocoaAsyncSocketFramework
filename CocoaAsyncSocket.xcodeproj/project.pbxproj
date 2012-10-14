@@ -23,6 +23,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		27B16AC4162B5A47008731F6 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B117A1628E023005A82FA /* CocoaLumberjack.framework */; };
 		27FBB4D6162765FF0060C9AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4D5162765FF0060C9AF /* Foundation.framework */; };
 		27FBB4EE162766610060C9AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4ED162766610060C9AF /* Cocoa.framework */; };
 		27FBB510162769250060C9AF /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB507162769250060C9AF /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -146,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B16AC4162B5A47008731F6 /* CocoaLumberjack.framework in Frameworks */,
 				27FBB526162769670060C9AF /* Security.framework in Frameworks */,
 				27FBB4EE162766610060C9AF /* Cocoa.framework in Frameworks */,
 			);
