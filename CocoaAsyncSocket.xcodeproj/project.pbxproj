@@ -24,6 +24,12 @@
 
 /* Begin PBXBuildFile section */
 		27B16AC4162B5A47008731F6 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B117A1628E023005A82FA /* CocoaLumberjack.framework */; };
+		27C38CA2162B96B9006E831C /* License-CocoaAsyncSocket.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27C38C9F162B96B9006E831C /* License-CocoaAsyncSocket.txt */; };
+		27C38CA3162B96B9006E831C /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27C38CA0162B96B9006E831C /* License.txt */; };
+		27C38CA4162B96B9006E831C /* Version in Resources */ = {isa = PBXBuildFile; fileRef = 27C38CA1162B96B9006E831C /* Version */; };
+		27C38CA5162B96C3006E831C /* License-CocoaAsyncSocket.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38C9F162B96B9006E831C /* License-CocoaAsyncSocket.txt */; };
+		27C38CA6162B96C3006E831C /* License.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38CA0162B96B9006E831C /* License.txt */; };
+		27C38CA7162B96C3006E831C /* Version in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38CA1162B96B9006E831C /* Version */; };
 		27FBB4D6162765FF0060C9AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4D5162765FF0060C9AF /* Foundation.framework */; };
 		27FBB4EE162766610060C9AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4ED162766610060C9AF /* Cocoa.framework */; };
 		27FBB510162769250060C9AF /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB507162769250060C9AF /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,12 +49,6 @@
 		27FBB529162769BF0060C9AF /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB509162769250060C9AF /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB52A162769BF0060C9AF /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB50C162769250060C9AF /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB52B162769BF0060C9AF /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB50E162769250060C9AF /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27FBB53016276A300060C9AF /* CocoaAsyncSocket.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27FBB52F16276A300060C9AF /* CocoaAsyncSocket.txt */; };
-		27FBB53216276A620060C9AF /* LICENSE.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27FBB52E16276A2A0060C9AF /* LICENSE.txt */; };
-		27FBB53316276A630060C9AF /* CocoaAsyncSocket.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27FBB52F16276A300060C9AF /* CocoaAsyncSocket.txt */; };
-		27FBB53416276A680060C9AF /* VERSION in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27FBB53116276A580060C9AF /* VERSION */; };
-		27FBB53516276A6D0060C9AF /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27FBB52E16276A2A0060C9AF /* LICENSE.txt */; };
-		27FBB53616276A6F0060C9AF /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 27FBB53116276A580060C9AF /* VERSION */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,9 +103,9 @@
 			dstPath = "${PRODUCT_NAME}Resources";
 			dstSubfolderSpec = 16;
 			files = (
-				27FBB53216276A620060C9AF /* LICENSE.txt in CopyFiles */,
-				27FBB53316276A630060C9AF /* CocoaAsyncSocket.txt in CopyFiles */,
-				27FBB53416276A680060C9AF /* VERSION in CopyFiles */,
+				27C38CA5162B96C3006E831C /* License-CocoaAsyncSocket.txt in CopyFiles */,
+				27C38CA6162B96C3006E831C /* License.txt in CopyFiles */,
+				27C38CA7162B96C3006E831C /* Version in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +113,9 @@
 
 /* Begin PBXFileReference section */
 		270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaLumberjack.xcodeproj; path = Frameworks/CocoaLumberjack/CocoaLumberjack.xcodeproj; sourceTree = "<group>"; };
+		27C38C9F162B96B9006E831C /* License-CocoaAsyncSocket.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-CocoaAsyncSocket.txt"; sourceTree = "<group>"; };
+		27C38CA0162B96B9006E831C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		27C38CA1162B96B9006E831C /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version; sourceTree = "<group>"; };
 		27FBB4D2162765FF0060C9AF /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBB4D5162765FF0060C9AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27FBB4EC162766610060C9AF /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,9 +132,6 @@
 		27FBB50E162769250060C9AF /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
 		27FBB50F162769250060C9AF /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 		27FBB525162769670060C9AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		27FBB52E16276A2A0060C9AF /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		27FBB52F16276A300060C9AF /* CocoaAsyncSocket.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaAsyncSocket.txt; path = Licenses/CocoaAsyncSocket.txt; sourceTree = "<group>"; };
-		27FBB53116276A580060C9AF /* VERSION */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				27FBB505162769170060C9AF /* CocoaAsyncSocket */,
+				27FBB52D16276A060060C9AF /* Resources */,
 				27FBB4D4162765FF0060C9AF /* Frameworks */,
 				27FBB4D3162765FF0060C9AF /* Products */,
 			);
@@ -210,7 +211,6 @@
 			children = (
 				27FBB506162769250060C9AF /* GCD */,
 				27FBB50B162769250060C9AF /* RunLoop */,
-				27FBB52D16276A060060C9AF /* Supporting Files */,
 			);
 			name = CocoaAsyncSocket;
 			sourceTree = "<group>";
@@ -239,14 +239,14 @@
 			path = Frameworks/CocoaAsyncSocket/RunLoop;
 			sourceTree = "<group>";
 		};
-		27FBB52D16276A060060C9AF /* Supporting Files */ = {
+		27FBB52D16276A060060C9AF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				27FBB52E16276A2A0060C9AF /* LICENSE.txt */,
-				27FBB52F16276A300060C9AF /* CocoaAsyncSocket.txt */,
-				27FBB53116276A580060C9AF /* VERSION */,
+				27C38C9F162B96B9006E831C /* License-CocoaAsyncSocket.txt */,
+				27C38CA0162B96B9006E831C /* License.txt */,
+				27C38CA1162B96B9006E831C /* Version */,
 			);
-			name = "Supporting Files";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,9 +372,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27FBB53016276A300060C9AF /* CocoaAsyncSocket.txt in Resources */,
-				27FBB53516276A6D0060C9AF /* LICENSE.txt in Resources */,
-				27FBB53616276A6F0060C9AF /* VERSION in Resources */,
+				27C38CA2162B96B9006E831C /* License-CocoaAsyncSocket.txt in Resources */,
+				27C38CA3162B96B9006E831C /* License.txt in Resources */,
+				27C38CA4162B96B9006E831C /* Version in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
