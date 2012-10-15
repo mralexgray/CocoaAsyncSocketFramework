@@ -3,9 +3,16 @@
 1.  [Download](https://github.com/ase-lab/CocoaAsyncSocketFramework/downloads)
     and unarchive.
 2.  Drag the Framework(s) into Xcode adding it/them to your target.
-3.  *iOS*: In the *Build Settings* of your target set **Other Linker Flags** to `-ObjC`
-4.  *OS X*: Make sure to copy the Framework(s) into the application
-    (see [OS X](#)).
+3.  *iOS*
+    1.  In the *Build Settings* of your target set **Other Linker Flags** to `-ObjC`
+    2.  Link necessary frameworks:
+        *   CFNetwork.framework
+        *   Security.framework
+4.  *OS X*
+    1.  Create a *Copy Files* build phase with the target *Frameworks*
+        and add the Framework(s).
+    2.  Link necessary framework: Security.framework
+5.  Link necessary Frameworks (see [Requirements](#requirements)).
 
 # What is CocoaAsyncSocketFramework?
 
@@ -24,7 +31,11 @@ the Framework functions. This makes debugging a little more difficult.
 
 # Requirements
 
-There are no requirements.
+*   iOS
+    *   CFNetwork.framework
+    *   Security.framework
+*   OS X
+    *   Security.framework
 
 # Compatibility
 
