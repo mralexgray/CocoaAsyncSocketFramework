@@ -30,8 +30,6 @@
 		27C38CA5162B96C3006E831C /* License-CocoaAsyncSocket.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38C9F162B96B9006E831C /* License-CocoaAsyncSocket.txt */; };
 		27C38CA6162B96C3006E831C /* License.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38CA0162B96B9006E831C /* License.txt */; };
 		27C38CA7162B96C3006E831C /* Version in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38CA1162B96B9006E831C /* Version */; };
-		27FBB4D6162765FF0060C9AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4D5162765FF0060C9AF /* Foundation.framework */; };
-		27FBB4EE162766610060C9AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4ED162766610060C9AF /* Cocoa.framework */; };
 		27FBB510162769250060C9AF /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB507162769250060C9AF /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB511162769250060C9AF /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FBB508162769250060C9AF /* GCDAsyncSocket.m */; };
 		27FBB512162769250060C9AF /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FBB508162769250060C9AF /* GCDAsyncSocket.m */; };
@@ -44,11 +42,20 @@
 		27FBB519162769250060C9AF /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB50E162769250060C9AF /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB51A162769250060C9AF /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FBB50F162769250060C9AF /* AsyncUdpSocket.m */; };
 		27FBB51B162769250060C9AF /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FBB50F162769250060C9AF /* AsyncUdpSocket.m */; };
-		27FBB526162769670060C9AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB525162769670060C9AF /* Security.framework */; };
 		27FBB528162769BF0060C9AF /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB507162769250060C9AF /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB529162769BF0060C9AF /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB509162769250060C9AF /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB52A162769BF0060C9AF /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB50C162769250060C9AF /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB52B162769BF0060C9AF /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB50E162769250060C9AF /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5A25821163AE5F100D1E001 /* CocoaAsyncSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A25820163AE5F100D1E001 /* CocoaAsyncSocketTests.m */; };
+		D5A25822163AE5F100D1E001 /* CocoaAsyncSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A25820163AE5F100D1E001 /* CocoaAsyncSocketTests.m */; };
+		D5A25829163AE78800D1E001 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4EC162766610060C9AF /* CocoaAsyncSocket.framework */; };
+		D5FE34C0163AEE9D0090BB94 /* libCocoaAsyncSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4D2162765FF0060C9AF /* libCocoaAsyncSocket.a */; };
+		D5FE34D6163AEF5F0090BB94 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34D3163AEF480090BB94 /* SenTestingKit.framework */; };
+		D5FE34DA163AEFC50090BB94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34D7163AEFA80090BB94 /* Security.framework */; };
+		D5FE34DC163AEFE40090BB94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34DB163AEFE40090BB94 /* CFNetwork.framework */; };
+		D5FE34DD163AEFF30090BB94 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34D3163AEF480090BB94 /* SenTestingKit.framework */; };
+		D5FE34E4163AF0560090BB94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34DE163AF0110090BB94 /* Security.framework */; };
+		D5FE34E5163AF05A0090BB94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34E1163AF0390090BB94 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +115,20 @@
 			remoteGlobalIDString = 271173CF1634CE850077D393;
 			remoteInfo = CocoaLumberjackOSXTests;
 		};
+		D5FE34BB163AEE870090BB94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27FBB4C9162765FF0060C9AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FBB4EB162766610060C9AF;
+			remoteInfo = CocoaAsyncSocketOSX;
+		};
+		D5FE34BD163AEE8D0090BB94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27FBB4C9162765FF0060C9AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FBB4D1162765FF0060C9AF;
+			remoteInfo = CocoaAsyncSocketStaticIOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,12 +152,7 @@
 		27C38CA0162B96B9006E831C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		27C38CA1162B96B9006E831C /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version; sourceTree = "<group>"; };
 		27FBB4D2162765FF0060C9AF /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		27FBB4D5162765FF0060C9AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27FBB4EC162766610060C9AF /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		27FBB4ED162766610060C9AF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		27FBB4F0162766610060C9AF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		27FBB4F1162766610060C9AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		27FBB4F2162766610060C9AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27FBB507162769250060C9AF /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		27FBB508162769250060C9AF /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		27FBB509162769250060C9AF /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -145,7 +161,15 @@
 		27FBB50D162769250060C9AF /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		27FBB50E162769250060C9AF /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
 		27FBB50F162769250060C9AF /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
-		27FBB525162769670060C9AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		D5A25765163AE01700D1E001 /* CocoaAsyncSocketIOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaAsyncSocketIOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5A257AD163AE12400D1E001 /* CocoaAsyncSocketOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaAsyncSocketOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5A2581F163AE5F100D1E001 /* CocoaAsyncSocketTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocketTests.h; sourceTree = "<group>"; };
+		D5A25820163AE5F100D1E001 /* CocoaAsyncSocketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaAsyncSocketTests.m; sourceTree = "<group>"; };
+		D5FE34D3163AEF480090BB94 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D5FE34D7163AEFA80090BB94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		D5FE34DB163AEFE40090BB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		D5FE34DE163AF0110090BB94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D5FE34E1163AF0390090BB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +177,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27FBB4D6162765FF0060C9AF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +184,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FE34DC163AEFE40090BB94 /* CFNetwork.framework in Frameworks */,
+				D5FE34DA163AEFC50090BB94 /* Security.framework in Frameworks */,
 				27B16AC4162B5A47008731F6 /* CocoaLumberjack.framework in Frameworks */,
-				27FBB526162769670060C9AF /* Security.framework in Frameworks */,
-				27FBB4EE162766610060C9AF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5A25761163AE01700D1E001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5FE34E5163AF05A0090BB94 /* CFNetwork.framework in Frameworks */,
+				D5FE34E4163AF0560090BB94 /* Security.framework in Frameworks */,
+				D5FE34D6163AEF5F0090BB94 /* SenTestingKit.framework in Frameworks */,
+				D5FE34C0163AEE9D0090BB94 /* libCocoaAsyncSocket.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5A257A9163AE12400D1E001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5FE34DD163AEFF30090BB94 /* SenTestingKit.framework in Frameworks */,
+				D5A25829163AE78800D1E001 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				27FBB505162769170060C9AF /* CocoaAsyncSocket */,
+				D5A2581E163AE5F100D1E001 /* CocoaAsyncSocketTests */,
 				27FBB52D16276A060060C9AF /* Resources */,
 				27FBB4D4162765FF0060C9AF /* Frameworks */,
 				27FBB4D3162765FF0060C9AF /* Products */,
@@ -196,6 +240,8 @@
 			children = (
 				27FBB4D2162765FF0060C9AF /* libCocoaAsyncSocket.a */,
 				27FBB4EC162766610060C9AF /* CocoaAsyncSocket.framework */,
+				D5A25765163AE01700D1E001 /* CocoaAsyncSocketIOSTests.octest */,
+				D5A257AD163AE12400D1E001 /* CocoaAsyncSocketOSXTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,23 +249,12 @@
 		27FBB4D4162765FF0060C9AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */,
-				27FBB4D5162765FF0060C9AF /* Foundation.framework */,
-				27FBB4ED162766610060C9AF /* Cocoa.framework */,
-				27FBB525162769670060C9AF /* Security.framework */,
-				27FBB4EF162766610060C9AF /* Other Frameworks */,
+				D5FE34E0163AF01C0090BB94 /* iOS-Testing */,
+				D5FE34D9163AEFAE0090BB94 /* OSX */,
+				D5FE34CF163AEEF70090BB94 /* Shared */,
+				D5FE34D5163AEF510090BB94 /* Shared-Testing */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		27FBB4EF162766610060C9AF /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				27FBB4F0162766610060C9AF /* AppKit.framework */,
-				27FBB4F1162766610060C9AF /* CoreData.framework */,
-				27FBB4F2162766610060C9AF /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		27FBB505162769170060C9AF /* CocoaAsyncSocket */ = {
@@ -263,6 +298,49 @@
 				27C38CA1162B96B9006E831C /* Version */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D5A2581E163AE5F100D1E001 /* CocoaAsyncSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5A2581F163AE5F100D1E001 /* CocoaAsyncSocketTests.h */,
+				D5A25820163AE5F100D1E001 /* CocoaAsyncSocketTests.m */,
+			);
+			path = CocoaAsyncSocketTests;
+			sourceTree = "<group>";
+		};
+		D5FE34CF163AEEF70090BB94 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				270B116E1628E022005A82FA /* CocoaLumberjack.xcodeproj */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		D5FE34D5163AEF510090BB94 /* Shared-Testing */ = {
+			isa = PBXGroup;
+			children = (
+				D5FE34D3163AEF480090BB94 /* SenTestingKit.framework */,
+			);
+			name = "Shared-Testing";
+			sourceTree = "<group>";
+		};
+		D5FE34D9163AEFAE0090BB94 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				D5FE34DB163AEFE40090BB94 /* CFNetwork.framework */,
+				D5FE34D7163AEFA80090BB94 /* Security.framework */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		D5FE34E0163AF01C0090BB94 /* iOS-Testing */ = {
+			isa = PBXGroup;
+			children = (
+				D5FE34E1163AF0390090BB94 /* CFNetwork.framework */,
+				D5FE34DE163AF0110090BB94 /* Security.framework */,
+			);
+			name = "iOS-Testing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,13 +410,51 @@
 			productReference = 27FBB4EC162766610060C9AF /* CocoaAsyncSocket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D5A25764163AE01700D1E001 /* CocoaAsyncSocketIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5A25775163AE01800D1E001 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocketIOSTests" */;
+			buildPhases = (
+				D5A25760163AE01700D1E001 /* Sources */,
+				D5A25761163AE01700D1E001 /* Frameworks */,
+				D5A25762163AE01700D1E001 /* Resources */,
+				D5A25763163AE01700D1E001 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5FE34BE163AEE8D0090BB94 /* PBXTargetDependency */,
+			);
+			name = CocoaAsyncSocketIOSTests;
+			productName = CocoaAsyncSocketIOSTests;
+			productReference = D5A25765163AE01700D1E001 /* CocoaAsyncSocketIOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D5A257AC163AE12400D1E001 /* CocoaAsyncSocketOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5A257BB163AE12400D1E001 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocketOSXTests" */;
+			buildPhases = (
+				D5A257A8163AE12400D1E001 /* Sources */,
+				D5A257A9163AE12400D1E001 /* Frameworks */,
+				D5A257AA163AE12400D1E001 /* Resources */,
+				D5A257AB163AE12400D1E001 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5FE34BC163AEE870090BB94 /* PBXTargetDependency */,
+			);
+			name = CocoaAsyncSocketOSXTests;
+			productName = CocoaAsyncSocketOSXTests;
+			productReference = D5A257AD163AE12400D1E001 /* CocoaAsyncSocketOSXTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		27FBB4C9162765FF0060C9AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "ASE Group";
 			};
 			buildConfigurationList = 27FBB4CC162765FF0060C9AF /* Build configuration list for PBXProject "CocoaAsyncSocket" */;
@@ -362,6 +478,8 @@
 				27FBB4D1162765FF0060C9AF /* CocoaAsyncSocketStaticIOS */,
 				27FBB5001627668B0060C9AF /* CocoaAsyncSocketIOS */,
 				27FBB4EB162766610060C9AF /* CocoaAsyncSocketOSX */,
+				D5A25764163AE01700D1E001 /* CocoaAsyncSocketIOSTests */,
+				D5A257AC163AE12400D1E001 /* CocoaAsyncSocketOSXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -408,6 +526,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5A25762163AE01700D1E001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5A257AA163AE12400D1E001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -439,6 +571,32 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"\n";
 		};
+		D5A25763163AE01700D1E001 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		D5A257AB163AE12400D1E001 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -461,6 +619,22 @@
 				27FBB515162769250060C9AF /* GCDAsyncUdpSocket.m in Sources */,
 				27FBB518162769250060C9AF /* AsyncSocket.m in Sources */,
 				27FBB51B162769250060C9AF /* AsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5A25760163AE01700D1E001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A25821163AE5F100D1E001 /* CocoaAsyncSocketTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5A257A8163AE12400D1E001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A25822163AE5F100D1E001 /* CocoaAsyncSocketTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +661,16 @@
 			target = 27FBB4D1162765FF0060C9AF /* CocoaAsyncSocketStaticIOS */;
 			targetProxy = 27FBB53716276B4C0060C9AF /* PBXContainerItemProxy */;
 		};
+		D5FE34BC163AEE870090BB94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27FBB4EB162766610060C9AF /* CocoaAsyncSocketOSX */;
+			targetProxy = D5FE34BB163AEE870090BB94 /* PBXContainerItemProxy */;
+		};
+		D5FE34BE163AEE8D0090BB94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27FBB4D1162765FF0060C9AF /* CocoaAsyncSocketStaticIOS */;
+			targetProxy = D5FE34BD163AEE8D0090BB94 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -494,12 +678,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -507,8 +689,8 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -527,14 +709,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -572,12 +752,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -590,12 +764,6 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -611,6 +779,56 @@
 		27FBB5031627668B0060C9AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+			};
+			name = Release;
+		};
+		D5A25776163AE01800D1E001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D5A25777163AE01800D1E001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		D5A257BC163AE12400D1E001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D5A257BD163AE12400D1E001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -649,6 +867,24 @@
 			buildConfigurations = (
 				27FBB5021627668B0060C9AF /* Debug */,
 				27FBB5031627668B0060C9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5A25775163AE01800D1E001 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocketIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5A25776163AE01800D1E001 /* Debug */,
+				D5A25777163AE01800D1E001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5A257BB163AE12400D1E001 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocketOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5A257BC163AE12400D1E001 /* Debug */,
+				D5A257BD163AE12400D1E001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
