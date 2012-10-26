@@ -57,6 +57,8 @@
 		D5FE34E4163AF0560090BB94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34DE163AF0110090BB94 /* Security.framework */; };
 		D5FE34E5163AF05A0090BB94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34E1163AF0390090BB94 /* CFNetwork.framework */; };
 		D5FE35CF163AF6F20090BB94 /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B11781628E023005A82FA /* libCocoaLumberjack.a */; };
+		D5FE3669163AFC3E0090BB94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE3665163AFC260090BB94 /* UIKit.framework */; };
+		D5FE366A163AFC410090BB94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE3667163AFC2E0090BB94 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,8 @@
 		D5FE34DB163AEFE40090BB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		D5FE34DE163AF0110090BB94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D5FE34E1163AF0390090BB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D5FE3665163AFC260090BB94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D5FE3667163AFC2E0090BB94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FE366A163AFC410090BB94 /* CoreGraphics.framework in Frameworks */,
+				D5FE3669163AFC3E0090BB94 /* UIKit.framework in Frameworks */,
 				D5FE34E5163AF05A0090BB94 /* CFNetwork.framework in Frameworks */,
 				D5FE34E4163AF0560090BB94 /* Security.framework in Frameworks */,
 				D5FE34D6163AEF5F0090BB94 /* SenTestingKit.framework in Frameworks */,
@@ -339,6 +345,8 @@
 		D5FE34E0163AF01C0090BB94 /* iOS-Testing */ = {
 			isa = PBXGroup;
 			children = (
+				D5FE3667163AFC2E0090BB94 /* CoreGraphics.framework */,
+				D5FE3665163AFC260090BB94 /* UIKit.framework */,
 				D5FE34E1163AF0390090BB94 /* CFNetwork.framework */,
 				D5FE34DE163AF0110090BB94 /* Security.framework */,
 			);
@@ -792,6 +800,7 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -805,6 +814,7 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
