@@ -56,6 +56,7 @@
 		D5FE34DD163AEFF30090BB94 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34D3163AEF480090BB94 /* SenTestingKit.framework */; };
 		D5FE34E4163AF0560090BB94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34DE163AF0110090BB94 /* Security.framework */; };
 		D5FE34E5163AF05A0090BB94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE34E1163AF0390090BB94 /* CFNetwork.framework */; };
+		D5FE35CF163AF6F20090BB94 /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B11781628E023005A82FA /* libCocoaLumberjack.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FE35CF163AF6F20090BB94 /* libCocoaLumberjack.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
