@@ -23,9 +23,9 @@
 
 - (void)testExample
 {
-	dispatch_queue_t mainQueue = dispatch_get_main_queue();
-	
-	[[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:mainQueue];
+	dispatch_queue_t mainQueue = dispatch_get_main_queue();	
+	GCDAsyncSocket * socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:mainQueue];
+    socket = nil;
 }
 
 @end
