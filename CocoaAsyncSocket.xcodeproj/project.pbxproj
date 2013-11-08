@@ -46,6 +46,7 @@
 		27FBB529162769BF0060C9AF /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB509162769250060C9AF /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB52A162769BF0060C9AF /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB50C162769250060C9AF /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FBB52B162769BF0060C9AF /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FBB50E162769250060C9AF /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BBD9D5E182C8ECF007395D5 /* CocoaLumberjack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 270B117A1628E023005A82FA /* CocoaLumberjack.framework */; };
 		D5A25821163AE5F100D1E001 /* CocoaAsyncSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A25820163AE5F100D1E001 /* CocoaAsyncSocketTests.m */; };
 		D5A25822163AE5F100D1E001 /* CocoaAsyncSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A25820163AE5F100D1E001 /* CocoaAsyncSocketTests.m */; };
 		D5A25829163AE78800D1E001 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FBB4EC162766610060C9AF /* CocoaAsyncSocket.framework */; };
@@ -144,6 +145,16 @@
 				27C38CA5162B96C3006E831C /* License-CocoaAsyncSocket.txt in CopyFiles */,
 				27C38CA6162B96C3006E831C /* License.txt in CopyFiles */,
 				27C38CA7162B96C3006E831C /* Version in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBD9D5D182C8EC5007395D5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7BBD9D5E182C8ECF007395D5 /* CocoaLumberjack.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +420,7 @@
 				27FBB4E8162766610060C9AF /* Frameworks */,
 				27FBB4E9162766610060C9AF /* Headers */,
 				27FBB4EA162766610060C9AF /* Resources */,
+				7BBD9D5D182C8EC5007395D5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -766,7 +778,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@rpath";
+				OTHER_LDFLAGS = (
+					"-sub_umbrella",
+					CocoaLumberjack,
+				);
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -778,7 +795,12 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@rpath";
+				OTHER_LDFLAGS = (
+					"-sub_umbrella",
+					CocoaLumberjack,
+				);
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
