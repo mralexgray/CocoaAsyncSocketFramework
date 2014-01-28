@@ -1,9 +1,12 @@
-#import "CocoaAsyncSocketTests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
 #import <CocoaAsyncSocket/GCDAsyncSocket.h>
 #import <CocoaAsyncSocket/GCDAsyncUdpSocket.h>
 #import <CocoaAsyncSocket/AsyncSocket.h>
 #import <CocoaAsyncSocket/AsyncUdpSocket.h>
+
+
+@interface CocoaAsyncSocketTests : SenTestCase @end
 
 @implementation CocoaAsyncSocketTests
 

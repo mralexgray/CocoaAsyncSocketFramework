@@ -336,9 +336,6 @@ enum GCDAsyncSocketConfig
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * A PreBuffer is used when there is more data available on the socket
@@ -488,9 +485,6 @@ enum GCDAsyncSocketConfig
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * The GCDAsyncReadPacket encompasses the instructions for any given read.
@@ -958,9 +952,6 @@ enum GCDAsyncSocketConfig
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * The GCDAsyncWritePacket encompasses the instructions for any given write.
@@ -993,9 +984,6 @@ enum GCDAsyncSocketConfig
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * The GCDAsyncSpecialPacket encompasses special instructions for interruptions in the read/write queues.
@@ -1023,9 +1011,6 @@ enum GCDAsyncSocketConfig
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @implementation GCDAsyncSocket
 
@@ -5178,29 +5163,19 @@ enum GCDAsyncSocketConfig
 	}
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark Writing
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)writeData:(NSData *)data withTimeout:(NSTimeInterval)timeout tag:(long)tag
-{
-	if ([data length] == 0) return;
+#pragma mark Writing
+
+- (void)writeData:(NSData *)data withTimeout:(NSTimeInterval)timeout tag:(long)tag {	if (data.length == 0) return;
+
+	GCDAsyncWritePacket *packet = [GCDAsyncWritePacket.alloc initWithData:data timeout:timeout tag:tag];
 	
-	GCDAsyncWritePacket *packet = [[GCDAsyncWritePacket alloc] initWithData:data timeout:timeout tag:tag];
-	
-	dispatch_async(socketQueue, ^{ @autoreleasepool {
-		
-		LogTrace();
-		
-		if ((flags & kSocketStarted) && !(flags & kForbidReadsWrites))
-		{
-			[writeQueue addObject:packet];
-			[self maybeDequeueWrite];
-		}
+	dispatch_async(socketQueue, ^{ @autoreleasepool { LogTrace();	if (!(flags & kSocketStarted) || (flags & kForbidReadsWrites)) return;
+
+			[writeQueue addObject:packet];		[self maybeDequeueWrite];
 	}});
 	
-	// Do not rely on the block being run in order to release the packet,
-	// as the queue might get released without the block completing.
+	// Do not rely on the block being run in order to release the packet, as the queue might get released without the block completing.
 }
 
 - (float)progressOfWriteReturningTag:(long *)tagPtr bytesDone:(NSUInteger *)donePtr total:(NSUInteger *)totalPtr
@@ -5211,31 +5186,21 @@ enum GCDAsyncSocketConfig
 		
 		if (!currentWrite || ![currentWrite isKindOfClass:[GCDAsyncWritePacket class]])
 		{
-			// We're not writing anything right now.
+			if (tagPtr   != NULL)   *tagPtr = 0; 	// We're not writing anything right now.
+			if (donePtr  != NULL)  *donePtr = 0;
+			if (totalPtr != NULL) *totalPtr = 0;						result = NAN;
+
+		}	else	{
+
+			NSUInteger done = currentWrite->bytesDone, total = [currentWrite->buffer length];
 			
-			if (tagPtr != NULL)   *tagPtr = 0;
-			if (donePtr != NULL)  *donePtr = 0;
-			if (totalPtr != NULL) *totalPtr = 0;
-			
-			result = NAN;
-		}
-		else
-		{
-			NSUInteger done = currentWrite->bytesDone;
-			NSUInteger total = [currentWrite->buffer length];
-			
-			if (tagPtr != NULL)   *tagPtr = currentWrite->tag;
-			if (donePtr != NULL)  *donePtr = done;
-			if (totalPtr != NULL) *totalPtr = total;
-			
-			result = (float)done / (float)total;
+			if (tagPtr   != NULL)   *tagPtr = currentWrite->tag;
+			if (donePtr  != NULL)  *donePtr = done;
+			if (totalPtr != NULL) *totalPtr = total;				result = (float)done / (float)total;
 		}
 	};
 	
-	if (dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey))
-		block();
-	else
-		dispatch_sync(socketQueue, block);
+	dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey) ? block() : dispatch_sync(socketQueue, block);
 	
 	return result;
 }
